@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap");
+body, html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Montserrat';
+  font-size: .8em;
+}
+
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 2em);
+  background: white;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  padding: 1em;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.wrapper section {
+  padding: 3em;
+}
+
+.wrapper section h1, .wrapper section h2, .wrapper section .read-btn {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.wrapper section .read-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.wrapper section .primary {
+  padding: 1.5em 1.5em 1.5em calc(1.2em + 25px);
+  display: inline-block;
+  border: 1px solid grey;
+  margin-top: 3em;
+  margin-left: -3.1em;
+}
+
+.wrapper section .clipper {
+  overflow: hidden;
+}
+
+.wrapper section.hero {
+  padding-top: 8em;
+  background: url("../Images/guiterist.jpg");
+  background-size: cover;
+}
+
+.wrapper section.hero h1 {
+  font-size: 1.7rem;
+}
+
+.wrapper section.hero p {
+  width: 70%;
+  font-size: .9rem;
+  margin-bottom: 0;
+}
+
+.wrapper section.hero .arrow-icon {
+  margin-right: .5em;
+}
+
+.wrapper section.sidebar, .wrapper section.subscribe {
+  line-height: 1.6em;
+}
+
+.wrapper section.sidebar {
+  background: #fdd73d;
+}
+
+.wrapper section.sidebar p {
+  margin-bottom: 2em;
+}
+
+.wrapper section.sidebar .read-btn {
+  display: block;
+}
+
+.wrapper section.sidebar .arrow-icon {
+  margin-right: .2em;
+}
+
+.wrapper section.subscribe input {
+  width: calc(100% - 2em);
+  padding: .9em;
+  font-family: 'Montserrat';
+  margin-bottom: 1em;
+  border: 1px solid grey;
+}
+
+.wrapper section.subscribe button {
+  width: 100%;
+  padding: 0.8em;
+  border: none;
+  background: #000;
+  color: #FFFFFF;
+  font-family: 'Montserrat';
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    font-size: 14px;
+  }
+  .wrapper section.hero h1 {
+    font-size: 2rem;
+    margin: 1em 0 0;
+  }
+  .wrapper section.hero p {
+    width: 50%;
+    margin: 2em 0 2em 0;
+  }
+  .wrapper section.hero .primary {
+    position: relative;
+    left: -48px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+  .wrapper section.hero .primary .arrow-icon {
+    padding-left: 3.3em;
+  }
+  .wrapper section.sidebar, .wrapper section.subscribe {
+    padding-top: 4em;
+  }
+  .container {
+    width: 93%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    background: none;
+  }
+  header nav {
+    margin: auto 5% auto auto;
+  }
+  .wrapper {
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+    -ms-grid-rows: 60% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: 'hero feature' 'hero subscribe';
+    height: 100vh;
+  }
+  .wrapper section.hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: hero;
+    background-position: -190px 0;
+  }
+  .wrapper section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper section.sidebar, .wrapper section.subscribe {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .wrapper section.hero {
+    background-position: -100px 0;
+  }
+}
+
+@media only screen and (min-width: 1288px) {
+  .wrapper section.hero {
+    background-position: -30px 0;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  header nav {
+    margin: auto 7% auto auto;
+  }
+}
+
+@media only screen and (min-width: 1544px) {
+  .wrapper section.hero {
+    background-position: 0 0;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html, .wrapper {
+    font-size: 19px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
